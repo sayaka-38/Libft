@@ -6,7 +6,7 @@
 /*   By: skihara <skihara@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 12:34:57 by skihara           #+#    #+#             */
-/*   Updated: 2020/11/23 10:07:11 by skihara          ###   ########.fr       */
+/*   Updated: 2020/11/17 16:18:11 by skihara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (len <= 0 || ft_strlen(s) <= start)
 		return (ft_strdup(""));
-	if (ft_strlen(s) < start)
-	{
-		
-	}
 	ans = (char*)malloc(sizeof(char) * (len + 1));
 	if (ans == NULL)
 		return (NULL);
 	i = 0;
 	while (i < ft_strlen(s) && i < len)
 	{
-		ans[i] = s[start + i];
+		ans[i] = s[start];
 		i++;
+		start++;
 	}
 	ans[i] = '\0';
 	return (ans);
