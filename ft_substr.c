@@ -6,7 +6,7 @@
 /*   By: skihara <skihara@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 12:34:57 by skihara           #+#    #+#             */
-/*   Updated: 2020/11/17 16:18:11 by skihara          ###   ########.fr       */
+/*   Updated: 2020/12/01 08:54:41 by skihara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	while (i < ft_strlen(s) && i < len)
 	{
-		ans[i] = s[start];
+		ans[i] = s[start + i];
 		i++;
-		start++;
 	}
 	ans[i] = '\0';
 	return (ans);
